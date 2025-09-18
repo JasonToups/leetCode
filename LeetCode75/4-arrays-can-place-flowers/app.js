@@ -29,7 +29,11 @@
  * @param {number} n
  * @return {boolean}
  */
-var canPlaceFlowers = function (flowerbed, n) {};
+var canPlaceFlowers = function (flowerbed, n) {
+  let validation = null;
+
+  return validation;
+};
 
 /* TESTS */
 

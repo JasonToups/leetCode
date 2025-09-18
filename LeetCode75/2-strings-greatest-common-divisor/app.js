@@ -33,7 +33,11 @@
  * @param {string} str2
  * @return {string}
  */
-var gcdOfStrings = function (str1, str2) {};
+var gcdOfStrings = function (str1, str2) {
+  let gcdString = '';
+
+  return gcdString;
+};
 
 /* TESTS */
 

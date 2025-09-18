@@ -45,7 +45,11 @@
  * @param {number} extraCandies
  * @return {boolean[]}
  */
-var kidsWithCandies = function (candies, extraCandies) {};
+var kidsWithCandies = function (candies, extraCandies) {
+  let validation = null;
+
+  return validation;
+};
 
 /* TESTS */
 

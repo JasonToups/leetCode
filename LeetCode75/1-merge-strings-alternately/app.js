@@ -45,9 +45,21 @@
  * @param {string} str2
  * @return {string}
  */
+
+// Current Time Complexity O(Max(N,M))
 var mergeAlternately = function (word1, word2) {
   let mergedString = '';
-  for (let i = 0; i < word1.length || word2.length; i++) {}
+  for (let i = 0; i < word1.length || i < word2.length; i++) {
+    if (i < word1.length) {
+      mergedString = mergedString + word1[i];
+    }
+    if (i < word2.length) {
+      mergedString = mergedString + word2[i];
+    }
+    console.log(mergedString);
+  }
+
+  return mergedString;
 };
 
 /* TESTS */
