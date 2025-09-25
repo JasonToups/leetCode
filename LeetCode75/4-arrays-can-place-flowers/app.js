@@ -30,9 +30,36 @@
  * @return {boolean}
  */
 var canPlaceFlowers = function (flowerbed, n) {
-  let validation = null;
+  let seeds = n;
+  // Iterate over the flowerbed
+  console.log('amount of seeds ', seeds);
 
-  return validation;
+  for (let i = 0; i <= flowerbed.length - 1; i++) {
+    // Look for an empty spot, surrounded by empty plots
+    if (seeds === 0) {
+      console.log('there are no more seeds', seeds, 'returning true');
+      return true;
+    }
+    if (flowerbed[i] === 0) {
+      let empty_left_plot = flowerbed[i - 1] === 0 || i === 0;
+      let empty_right_plot = flowerbed[i + 1] === 0 || i === flowerbed.length - 1;
+
+      if (empty_left_plot && empty_right_plot) {
+        console.log('we have an empty plot at ', i);
+        flowerbed[i] = 1;
+        console.log('planting a seed', seeds);
+        seeds--;
+        console.log('remaining seeds', seeds);
+        console.log('Here is our flowerbed', flowerbed);
+      }
+    }
+  }
+  // If we evaluate the whole flower bed and there are remaining seeds, return false.
+  if (seeds === 0) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 /* TESTS */
