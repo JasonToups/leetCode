@@ -46,9 +46,20 @@
  * @return {boolean[]}
  */
 var kidsWithCandies = function (candies, extraCandies) {
-  let validation = null;
+  // Find who has the most candies
+  let mostCandies = candies.toSorted((a, b) => a - b).at(-1);
+  console.log(mostCandies);
+  // Store Boolean evaluations of the candies in the array
+  let evalArray = [];
 
-  return validation;
+  for (let i = 0; i < candies.length; i++) {
+    if (candies[i] + extraCandies >= mostCandies) {
+      evalArray.push(true);
+    } else {
+      evalArray.push(false);
+    }
+  }
+  return evalArray;
 };
 
 /* TESTS */
